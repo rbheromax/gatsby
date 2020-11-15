@@ -13,7 +13,7 @@ const WrapperGrid = styled.div`
 
 const ContactForm = () => (
     <Section id="contact" style={{ backgroundColor: "#F6F6F6"}}>
-      <Container>
+      <StyledContainer style={{margin: "auto", maxWidth: "1200px"}}>
         <h1 style={{ marginBottom: 40 }}>Email Us</h1>
         <Form style={{maxWidth: "1200px"}}>
             <WrapperGrid>
@@ -35,7 +35,7 @@ const ContactForm = () => (
                 <StyledButton>Submit</StyledButton>
             </WrapperGrid>
         </Form>
-        </Container>
+        </StyledContainer>
     </Section>
 )
 
@@ -117,3 +117,7 @@ const StyledButton = styled.button`
     }
     
 `; 
+
+export const StyledContainer = styled(Container)`
+  align-items: center;
+`;
