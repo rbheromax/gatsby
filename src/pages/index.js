@@ -11,10 +11,12 @@ import ContactForm from '@sections/Contact';
 import Team from '@sections/Team';
 import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
+import { Section } from '@components/global';
 
 const IndexPage = () => (
   <Layout>
     <Navbar />
+    <Section id="top" style={{height: "0px", padding: "0px"}} />
     <Header />
     <About />
     <Products />

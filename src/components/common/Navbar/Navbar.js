@@ -60,7 +60,7 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Brand>
-            <StyledLink href="#header">
+            <StyledLink href="#top">
               Safara
             </StyledLink>
           </Brand>  
