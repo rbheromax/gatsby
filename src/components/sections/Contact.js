@@ -1,59 +1,116 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Section, Container } from '@components/global';
-import {
-  Nav,
-  NavItem,
-  Brand,
-  StyledContainer,
-  NavListWrapper,
-  MobileMenu,
-  Mobile,
-} from '../common/Navbar/style';
+import React from 'react'
+import styled from 'styled-components'
+import { css } from 'styled-components'
 
-const Contact = () => (
-        <Section id="brands" accent>
-          <StyledContainer>
-            <div>
-              {/* <h1>Used by biggest in tech</h1> */}
-              <ContactForm />
-            </div>
-          </StyledContainer>
-        </Section>
-  );
-  export default Contact;
-  class ContactForm extends React.Component {
-    render() {
-      const formStyle = {
-        textAlign: 'left'
-      }
-      const buttonsStyle = {
-        margin: '1rem',
-        textAlign: 'center',
-      }
-      return (
-        <form method="post" action="#">
-          <div className="field half first">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className="field half">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4"></textarea>
-          </div>
-          <ul className="actions">
-            <li>
-              <input type="submit" value="Send Message" className="special" />
-            </li>
-            <li>
-              <input type="reset" value="Reset" />
-            </li>
-          </ul>
-        </form>
-      );
+const WrapperGrid = styled.div`
+    ${props => props.full && css`
+        grid-column: 1 / 3;
+    `}
+`;
+
+
+
+const ContactForm = () => (
+    <div style={{padding: "128px", backgroundColor: "#F6F6F6"}}>
+        <h2>Email Us</h2>
+        <Form>
+            <WrapperGrid>
+                <Input type="text" name="name" placeholder="Name" />
+            </WrapperGrid>
+            <WrapperGrid>
+                <Input type="text" name="company" placeholder="Company"/>
+            </WrapperGrid>
+            <WrapperGrid>
+                <Input type="email" name="email" placeholder="Email" />
+            </WrapperGrid>
+            <WrapperGrid>
+                <Input type="text" name="phone" placeholder="Phone Number"/>
+            </WrapperGrid>
+            <WrapperGrid full>
+                <Textarea name="message" rows="5" placeholder="Message"></Textarea>
+            </WrapperGrid>
+            <WrapperGrid full>
+                <StyledButton>Submit</StyledButton>
+            </WrapperGrid>
+        </Form>
+    </div>
+)
+
+export default ContactForm
+
+const Title = ({ className, text }) => (
+    <h1 className={className}>{ text }</h1>
+)
+
+const StyledTitle = styled(Title)`
+    color: #1197D5;
+    font: 70px; 
+    text-align: center; 
+    @media (min-width: 700px) {
+        text-align: left; 
     }
-  }
+`; 
+
+const Textarea = styled.textarea`
+    border: 1px solid #1197D5; 
+    border-radius: 15px;
+    padding: 1em; 
+    width: 100%; 
+`; 
+
+const Label = styled.label`
+    display: block; 
+`; 
+
+const Input = styled.input`
+    border: 1px solid #1197D5; 
+    border-radius: 15px;
+
+    padding: 1em; 
+    width: 100%; 
+`; 
+
+const Form = styled.form`
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 20px; 
+`; 
+
+
+const FormContainer = styled.div`
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1170px;  
+    ${props => props.wrapper && css`
+        box-shadow: 0 0 20px 0 rgba(184, 22, 31, 0.3);
+        > * {
+            padding: 1em; 
+        }
+        
+        @media (min-width: 700px) {
+            display: grid; 
+            grid-template-columns: 1fr 2fr; 
+            > * {
+                padding: 2em; 
+            }
+        }
+    `}
+`; 
+
+const StyledButton = styled.button`
+    background: #1197D5;
+    border: 0; 
+    color: #fff; 
+    padding: 1em; 
+    text-transform: uppercase; 
+    width: 100%;
+    border-radius: 15px;
+
+    &:hover, &:focus {
+        background: #B8161F;
+        color: #fff; 
+        outline: 0; 
+        transition: background-color 2s ease-out; 
+    }
+    
+`; 
