@@ -11,8 +11,8 @@ const WrapperGrid = styled.div`
 
 
 const ContactForm = () => (
-    <div style={{padding: "128px", backgroundColor: "#F6F6F6"}}>
-        <h2>Email Us</h2>
+    <div id="contact" style={{padding: "128px", backgroundColor: "#F6F6F6"}}>
+        <h1 style={{ marginBottom: 40 }}>Email Us</h1>
         <Form>
             <WrapperGrid>
                 <Input type="text" name="name" placeholder="Name" />

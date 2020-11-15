@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Flip from 'react-reveal/Flip';
 
 import { Section, Container } from '@components/global';
-
+import Fade from 'react-reveal/Fade'
 const TEAM = [
   {
     name: 'Robert Carmack',
@@ -12,6 +13,8 @@ const TEAM = [
     role: 'Founder',
   },
 ];
+
+
 
 const Team = () => (
   <StaticQuery
@@ -46,6 +49,8 @@ const Team = () => (
         <Container style={{ position: 'relative' }}>
           <h1>The Team</h1>
           <TeamGrid>
+          <Fade right cascade>
+          <span>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
                 ({ node }) => node.relativePath === image
@@ -53,13 +58,16 @@ const Team = () => (
 
               return (
                 <div key={name}>
-                  <Img fluid={img.childImageSharp.fluid} alt={name} />
+                  <Img style={{borderRadius: "50%"}} fluid={img.childImageSharp.fluid} alt={name} />
                   <Title>{name}</Title>
                   <Subtitle>{role}</Subtitle>
                 </div>
               );
             })}
+            </span>
+                      </Fade>
           </TeamGrid>
+
           <Art>
             <Img fluid={data.art_team.childImageSharp.fluid} />
           </Art>

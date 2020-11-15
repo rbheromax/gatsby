@@ -10,20 +10,14 @@ import GithubIcon from '@static/icons/github.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
 import { Link } from 'gatsby';
+import { Spring } from 'react-spring';
 
 const SOCIAL = [
   {
     icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    link: 'https://github.com/rbheromax/gatsby',
   },
-  {
-    icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
-  },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
-  },
+
 ];
 
 const Footer = () => (

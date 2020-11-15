@@ -35,6 +35,8 @@ const Header = () => (
             <Art>
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
+            <Fade Bottom>
+
             <Text style={{color: "#fff"}}>
               <h1>
                 Consulting
@@ -50,6 +52,7 @@ const Header = () => (
                 </StyledLink>
               </p>
             </Text>
+            </Fade>
           </Grid>
           </Fade>
 

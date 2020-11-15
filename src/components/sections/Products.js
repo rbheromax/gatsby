@@ -53,6 +53,8 @@ const Products = () => (
                 </ExternalLink>
               ))}
             </LogoGrid>
+            <h4 style={{color: "#fff", fontWeight: "normal", textAlign: "right"}}>*Available in these formats</h4>
+
           </div>
           <Art style={{}}>
             <Img fluid={data.art_story.childImageSharp.fluid} />
