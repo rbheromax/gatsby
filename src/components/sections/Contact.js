@@ -12,7 +12,7 @@ const WrapperGrid = styled.div`
 
 
 const ContactForm = () => (
-    <Section id="contact" style={{padding: "128px 0", backgroundColor: "#F6F6F6"}}>
+    <Section id="contact" style={{ backgroundColor: "#F6F6F6"}}>
       <Container>
         <h1 style={{ marginBottom: 40 }}>Email Us</h1>
         <Form style={{maxWidth: "1200px"}}>
