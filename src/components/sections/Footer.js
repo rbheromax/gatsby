@@ -56,7 +56,7 @@ const Footer = () => (
             <div style={{lineHeight: "0.2"}}>
             <h4 style={{color: "#fff", fontWeight: "normal"}}>570 4th St</h4>
             <h4 style={{color: "#fff", fontWeight: "normal"}}>Lakewood, NJ 08701</h4>
-            <h4 style={{color: "#fff", fontWeight: "normal"}}>(732) 416-6114</h4>
+            <h4 style={{color: "#fff", fontWeight: "normal"}} href="tel:+17324166114">(732) 416-6114</h4>
             </div>
             <h4 style={{color: "#fff", fontWeight: "normal"}}>© 2020 Safara Associates</h4>
             </span>
