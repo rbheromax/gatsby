@@ -55,6 +55,12 @@ export const NavItem = styled.li`
       opacity: 1;
     }
   }
+  &:hover {
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out 1s;
+    text-decoration: underline;
+  }
 `;
 
 export const MobileMenu = styled.div`

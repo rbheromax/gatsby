@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-
 import { Container } from '@components/global';
 import {
   Nav,
@@ -12,6 +11,7 @@ import {
   MobileMenu,
   Mobile,
 } from './style';
+import styled from 'styled-components';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
@@ -59,11 +59,11 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-        <AnchorLink href="#header" style={{color: "#fff"}}>
           <Brand>
-          Safara
-          </Brand>
-          </AnchorLink>
+            <StyledLink>
+              Safara
+            </StyledLink>
+          </Brand>  
 
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
@@ -86,3 +86,14 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+
+const StyledLink = styled(AnchorLink)`
+  color: #fff;
+  &:hover {
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out 1s;
+    text-decoration: underline;
+  }
+`;
