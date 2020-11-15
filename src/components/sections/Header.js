@@ -26,7 +26,7 @@ const Header = () => (
       }
     `}
     render={data => (
-      <HeaderWrapper>
+      <HeaderWrapper style={{ overflow: "hidden"}}>
       <Section id="header" style={{height: "100vh"}}>
         <Container>
         <Fade Bottom>
