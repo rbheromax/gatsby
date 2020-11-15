@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { css } from 'styled-components'
+import { Section, Container } from '@components/global';
 
 const WrapperGrid = styled.div`
     ${props => props.full && css`
@@ -11,9 +12,10 @@ const WrapperGrid = styled.div`
 
 
 const ContactForm = () => (
-    <div id="contact" style={{padding: "128px", backgroundColor: "#F6F6F6"}}>
+    <Section id="contact" style={{padding: "128px 0", backgroundColor: "#F6F6F6"}}>
+      <Container>
         <h1 style={{ marginBottom: 40 }}>Email Us</h1>
-        <Form>
+        <Form style={{maxWidth: "1200px"}}>
             <WrapperGrid>
                 <Input type="text" name="name" placeholder="Name" />
             </WrapperGrid>
@@ -33,7 +35,8 @@ const ContactForm = () => (
                 <StyledButton>Submit</StyledButton>
             </WrapperGrid>
         </Form>
-    </div>
+        </Container>
+    </Section>
 )
 
 export default ContactForm

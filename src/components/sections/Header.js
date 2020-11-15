@@ -27,7 +27,7 @@ const Header = () => (
     `}
     render={data => (
       <HeaderWrapper>
-      <Section id="header">
+      <Section id="header" style={{height: "100vh"}}>
         <Container>
         <Fade Bottom>
 
@@ -36,7 +36,6 @@ const Header = () => (
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
             <Fade Bottom>
-
             <Text style={{color: "#fff"}}>
               <h1>
                 Consulting
