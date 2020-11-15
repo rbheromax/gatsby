@@ -42,9 +42,9 @@ const Products = () => (
       <Section id="products" accent>
         <StyledContainer>
           <div>
-            <div style={{textAlign: "right", padding: "50px"}}>
-              <h1>Products We Offer</h1>
-              <h3>Line Cards</h3>
+            <div style={{textAlign: "right", paddingTop: "50px", paddingBottom: "50px"}}>
+              <h1 style={{color: "#fff"}} >Products We Offer</h1>
+              <h3 style={{color: "#fff"}} >Download our Line Cards</h3>
             </div>
             <LogoGrid style={{paddingBottom: "100px"}}>
               {LOGOS.map(({ logo, link }) => (
