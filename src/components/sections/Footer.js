@@ -9,6 +9,7 @@ import ExternalLink from '@common/ExternalLink';
 import GithubIcon from '@static/icons/github.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
+import { Link } from 'gatsby';
 
 const SOCIAL = [
   {
@@ -46,16 +47,30 @@ const Footer = () => (
 
         <FooterWrapper>
           <StyledContainer>
+            <span>
             <Copyright>
               <h2>Safara</h2>
-              <span>
-                Created by
-                {` `}
-                <ExternalLink href="https://twitter.com/uvctezz">
-                  @uvctezz
-                </ExternalLink>
-              </span>
+              <div style={{lineHeight: "0.2"}}>
+            </div>
             </Copyright>
+            <div style={{lineHeight: "0.2"}}>
+            <h4 style={{color: "#fff", fontWeight: "normal"}}>570 4th St</h4>
+            <h4 style={{color: "#fff", fontWeight: "normal"}}>Lakewood, NJ 08701</h4>
+            <h4 style={{color: "#fff", fontWeight: "normal"}}>(732) 416-6114</h4>
+            </div>
+            <h4 style={{color: "#fff", fontWeight: "normal"}}>© 2020 Safara Associates</h4>
+            </span>
+            <div style={{ position: "absolute", bottom: 0}}>
+            <h4>
+{/* <span style={{color: "#fff"}}>
+  Created by
+  {` `}
+  <Link href="https://twitter.com/uvctezz">
+    @uvctezz
+  </Link>
+</span> */}
+</h4>
+            </div>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
