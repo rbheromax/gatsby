@@ -13,7 +13,7 @@ const WrapperGrid = styled.div`
 const ContactForm = () => (
     <div id="contact" style={{padding: "128px", backgroundColor: "#F6F6F6"}}>
         <h1 style={{ marginBottom: 40 }}>Email Us</h1>
-        <Form>
+        <Form style={{maxWidth: "1200px"}}>
             <WrapperGrid>
                 <Input type="text" name="name" placeholder="Name" />
             </WrapperGrid>
