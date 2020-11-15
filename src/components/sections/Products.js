@@ -11,7 +11,7 @@ import { ReactComponent as DOCXLogo } from '@images/logos/docx-icon.svg';
 
 
 
-const LOGOS = [
+const PRODUCTS = [
   {
     logo: PDFLogo,
     link: '/docs/line_card.pdf',
@@ -47,7 +47,7 @@ const Products = () => (
               <h3 style={{color: "#fff"}} >Download our Line Cards</h3>
             </div>
             <LogoGrid style={{paddingBottom: "100px"}}>
-              {LOGOS.map(({ logo, link }) => (
+              {PRODUCTS.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link}>
                   {logo()}
                 </ExternalLink>
