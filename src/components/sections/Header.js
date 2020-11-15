@@ -43,9 +43,9 @@ const Header = () => (
               </h1>
               <br />
               <p>
-                <AnchorLink href="#about" style={{color: "#fff"}}>
+                <StyledLink href="#about" style={{color: "#fff"}}>
                   Check out what we do &nbsp;&#x2794;
-                </AnchorLink>
+                </StyledLink>
               </p>
             </Text>
           </Grid>
@@ -115,3 +115,14 @@ const StyledExternalLink = styled(ExternalLink)`
 `;
 
 export default Header;
+
+const StyledLink = styled(AnchorLink)`
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out 1s;
+    text-decoration: underline;
+  }
+`;
