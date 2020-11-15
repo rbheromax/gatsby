@@ -58,7 +58,7 @@ const Team = () => (
 
               return (
                 <div key={name}>
-                  <Img style={{borderRadius: "50%"}} fluid={img.childImageSharp.fluid} alt={name} />
+                  <Img style={{borderRadius: "50%", width: "50%"}} fluid={img.childImageSharp.fluid} alt={name} />
                   <Title>{name}</Title>
                   <Subtitle>{role}</Subtitle>
                 </div>
