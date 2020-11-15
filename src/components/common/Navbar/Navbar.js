@@ -90,10 +90,11 @@ export default Navbar;
 
 const StyledLink = styled(AnchorLink)`
   color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out 0s;
   &:hover {
     visibility: visible;
     transform: scaleX(1);
-    transition: all 0.5s ease-in-out 1s;
     text-decoration: underline;
   }
 `;
