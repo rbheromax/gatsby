@@ -1,5 +1,5 @@
 # Safara
-
+![Screenshot](https://i.imgur.com/ckwMdTF.png)
 ## Installation
 
 Install the dependencies:
