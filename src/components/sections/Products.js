@@ -14,11 +14,11 @@ import { ReactComponent as DOCXLogo } from '@images/logos/docx-icon.svg';
 const LOGOS = [
   {
     logo: PDFLogo,
-    link: '/public/docs/line_card.pdf',
+    link: '/docs/line_card.pdf',
   },
   {
     logo: DOCXLogo,
-    link: '/public/docs/line_card.pdf',
+    link: '/docs/line_card.docx',
   }
 ];
 
