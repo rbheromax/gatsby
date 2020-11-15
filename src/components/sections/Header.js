@@ -1,4 +1,6 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -25,9 +27,10 @@ const Header = () => (
     `}
     render={data => (
       <HeaderWrapper>
-              <Section id="header">
-
+      <Section id="header">
         <Container>
+        <Fade Bottom>
+
           <Grid>
             <Art>
               <Img fluid={data.art_build.childImageSharp.fluid} />
@@ -48,6 +51,8 @@ const Header = () => (
               </p>
             </Text>
           </Grid>
+          </Fade>
+
         </Container>
         </Section>
 
