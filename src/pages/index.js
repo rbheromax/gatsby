@@ -7,7 +7,7 @@ import Header from '@sections/Header';
 import About from '@sections/About';
 import Brands from '@sections/Brands';
 import Products from '@sections/Products';
-import Contact from '@sections/Contact';
+import ContactForm from '@sections/Contact';
 import Team from '@sections/Team';
 import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
@@ -20,6 +20,7 @@ const IndexPage = () => (
     <Products />
     <Team />
     <Faq />
+    <ContactForm />
     <Footer />
   </Layout>
 );
