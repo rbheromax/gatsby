@@ -39,7 +39,7 @@ const Products = () => (
       }
     `}
     render={data => (
-      <Section id="products" accent>
+      <Section id="products" accent style={{height: "100vh"}}>
         <StyledContainer>
           <div>
             <div style={{textAlign: "right", paddingTop: "50px", paddingBottom: "50px"}}>
