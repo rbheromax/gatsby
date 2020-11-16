@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
+import Bounce from 'react-reveal/Bounce';
 
 const About = () => (
   <StaticQuery
@@ -46,6 +47,7 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
+        <Bounce left cascade>
           <Grid>
             <div>
               <h2>Speed past the competition</h2>
@@ -87,6 +89,7 @@ const About = () => (
               <Img fluid={data.art_ideas.childImageSharp.fluid} />
             </Art>
           </Grid>
+          </Bounce>
         </Container>
       </Section>
     )}

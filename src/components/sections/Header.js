@@ -29,7 +29,7 @@ const Header = () => (
       <HeaderWrapper style={{ overflow: "hidden"}}>
       <Section id="header" style={{height: "100vh"}}>
         <Container>
-        <Fade Bottom>
+        <Fade bottom>
 
           <Grid>
             <Art>
@@ -40,7 +40,7 @@ const Header = () => (
               <h1>
                 Consulting
                 <br />
-                and procurement
+                &amp; Procurement
                 <br />
                 services
               </h1>
@@ -91,7 +91,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  grid-gap: 64px;
+  grid-gap: 128px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;

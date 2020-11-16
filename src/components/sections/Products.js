@@ -9,7 +9,7 @@ import ExternalLink from '@common/ExternalLink';
 import { ReactComponent as PDFLogo } from '@images/logos/adobe-pdf.svg';
 import { ReactComponent as DOCXLogo } from '@images/logos/docx-icon.svg';
 
-
+import Fade from 'react-reveal/Fade'; 
 
 const PRODUCTS = [
   {
@@ -47,11 +47,13 @@ const Products = () => (
               <h3 style={{color: "#fff"}} >Download our Line Cards</h3>
             </div>
             <LogoGrid style={{paddingBottom: "100px"}}>
-              {PRODUCTS.map(({ logo, link }) => (
+                <Fade bottom>
+                {PRODUCTS.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link}>
                   {logo()}
                 </ExternalLink>
               ))}
+                </Fade>
             </LogoGrid>
             <h4 style={{color: "#fff", fontWeight: "normal", textAlign: "right"}}>*Available in these formats</h4>
 

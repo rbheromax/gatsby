@@ -14,6 +14,7 @@ import {
 import styled from 'styled-components';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import Fade from 'react-reveal/Fade';
 
 const NAV_ITEMS = ['About', 'Products', 'Team', 'FAQ', 'Contact'];
 
@@ -59,11 +60,13 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>
+        <Fade left>
+        <Brand>
             <StyledLink href="#top">
               Safara
             </StyledLink>
           </Brand>  
+        </Fade>
 
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
